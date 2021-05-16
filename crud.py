@@ -1,5 +1,9 @@
+import sqlalchemy
 from sqlalchemy.orm import Session
+from sqlalchemy import update as sql_update
 import models, schemas
+from models import CatApi
+
 
 def get_cat_by_id(db: Session, cat_id : int):
     return db.query(models.CatApi).filter(models.CatApi.id == cat_id).first()
@@ -34,18 +38,26 @@ def create_breed(db: Session, create : schemas.CreateBreed):
 
 def delete_breed(db : Session, breed_delete: str):
     db_breed = db.query(models.CatApi).filter(models.CatApi.breed == breed_delete).first()
-    db_breed = db_breed
     db.delete(db_breed)
     db.commit()
     db.refresh(db_breed)
     return db_breed
 
-def update_breed(db : Session, breed_update: str, update: schemas.UpdateBreed):
-    db_breed_update = models.CatApi(breed = update.breed, origin = update.origin, coat = update.coat,
-    body = update.body, pattern = update.pattern)
-    db_breed = db.query(models.CatApi).filter(models.CatApi.breed == breed_update).first()
-    update({db_breed_update})
+def update_breed(db : Session, breed_update: str, updated: schemas.UpdateBreed):
+    new_origin = str(updated.new_origin)
+    new_body = str(updated.new_body)
+    new_coat = str(updated.new_coat)
+    new_pattern = str(updated.new_pattern)
+
+    update_origin = sql_update(CatApi).where(updated.breed == updated.breed).values(origin = new_origin)
+    update_body = sql_update(CatApi).where(updated.breed == updated.breed).values(body = new_body)
+    update_coat = sql_update(CatApi).where(updated.breed == updated.breed).values(coat = new_coat)
+    update_pattern = sql_update(CatApi).where(updated.breed == updated.breed).values(pattern = new_pattern)
+    
+    db.execute(update_origin)
+    db.execute(update_body)
+    db.execute(update_coat)
+    db.execute(update_pattern)
     db.commit()
-    db.refresh(db_breed)
-    return db_breed
+    return updated
 

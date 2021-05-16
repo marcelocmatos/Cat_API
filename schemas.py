@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 class Breed(BaseModel):
     breed: str
@@ -20,11 +21,8 @@ class DeleteBreed(BaseModel):
         orm_mode = True
 
 class UpdateBreed(Breed):
-    breed: str = ''
-    origin: str = ''   
-    coat: str = ''
-    body: str = ''
-    pattern: str = ''
-
-    class CreateBreed(Breed):
-        pass
+    new_breed: str
+    new_origin: str   
+    new_coat: str
+    new_body: str
+    new_pattern: str

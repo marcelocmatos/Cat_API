@@ -63,7 +63,7 @@ def delete_breed(breed: schemas.DeleteBreed, db: Session = Depends(get_db)):
         raise HTTPException(status_code=400, detail="Breed doesn't exist")
     return db_cat_delete
 
-@app.patch("/breed/", response_model=schemas.UpdateBreed)
+@app.put("/breed/", response_model=schemas.UpdateBreed)
 def update_breed(breed: schemas.UpdateBreed, db: Session = Depends(get_db)):
-    db_cat_update = crud.update_breed(db, breed.breed, breed)
+    db_cat_update = crud.update_breed(db, breed, breed)
     return db_cat_update
