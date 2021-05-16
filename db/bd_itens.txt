@@ -1,0 +1,10 @@
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Abyssinian','Egypt','Long-haired','Fit','	');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Aegean','Greece','Long-haired','Normal','Two Colors');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('American Curl','United States','Short-haired','Big','Two Colors');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('American Bobtail','United States','Long-haired','Big','Two Colors');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('American Wirehair','United States','Medium-haired','Fit','Three Colors');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Arabian Mau','United Arab Emirates','Long-haired','Fit','Solid');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Siamese','Thailand','Medium-haired','Fit','Two Colors');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Khao Manee','Thailand','Long-haired','Fit','Two Colors');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('British Shorthair','United Kingdom','Long-haired','Big','Two Colors');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Manx','Egypt','Long-haired','Fit','Solid');
