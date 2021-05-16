@@ -21,7 +21,6 @@ class DeleteBreed(BaseModel):
         orm_mode = True
 
 class UpdateBreed(Breed):
-    new_breed: str
     new_origin: str   
     new_coat: str
     new_body: str

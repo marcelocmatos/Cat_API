@@ -1,4 +1,4 @@
-INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Abyssinian','Egypt','Long-haired','Fit','	');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Abyssinian','Egypt','Long-haired','Fit','Three Colors');
 INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Aegean','Greece','Long-haired','Normal','Two Colors');
 INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('American Curl','United States','Short-haired','Big','Two Colors');
 INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('American Bobtail','United States','Long-haired','Big','Two Colors');

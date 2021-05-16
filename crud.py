@@ -1,8 +1,6 @@
-import sqlalchemy
 from sqlalchemy.orm import Session
 from sqlalchemy import update as sql_update
 import models, schemas
-from models import CatApi
 
 
 def get_cat_by_id(db: Session, cat_id : int):
@@ -43,21 +41,19 @@ def delete_breed(db : Session, breed_delete: str):
     db.refresh(db_breed)
     return db_breed
 
-def update_breed(db : Session, breed_update: str, updated: schemas.UpdateBreed):
+def update_breed(db : Session, updated: schemas.UpdateBreed):
+    select_breed = str(updated.breed)
     new_origin = str(updated.new_origin)
     new_body = str(updated.new_body)
     new_coat = str(updated.new_coat)
     new_pattern = str(updated.new_pattern)
-
-    update_origin = sql_update(CatApi).where(updated.breed == updated.breed).values(origin = new_origin)
-    update_body = sql_update(CatApi).where(updated.breed == updated.breed).values(body = new_body)
-    update_coat = sql_update(CatApi).where(updated.breed == updated.breed).values(coat = new_coat)
-    update_pattern = sql_update(CatApi).where(updated.breed == updated.breed).values(pattern = new_pattern)
-    
-    db.execute(update_origin)
-    db.execute(update_body)
-    db.execute(update_coat)
-    db.execute(update_pattern)
+    update_data = sql_update(models.CatApi).where(models.CatApi.breed == select_breed).values(
+        body = new_body,
+        coat = new_coat,
+        origin = new_origin,
+        pattern = new_pattern
+        )
+    db.execute(update_data)
     db.commit()
     return updated
 
