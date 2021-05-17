@@ -7,4 +7,4 @@ INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Arabian Mau','Unit
 INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Siamese','Thailand','Medium-haired','Fit','Two Colors');
 INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Khao Manee','Thailand','Long-haired','Fit','Two Colors');
 INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('British Shorthair','United Kingdom','Long-haired','Big','Two Colors');
-INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Manx','Egypt','Long-haired','Fit','Solid');
+INSERT INTO cat_api (breed,origin,coat,body,pattern) VALUES ('Manx','Isle of Man','Long-haired','Fit','Solid');
