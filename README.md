@@ -135,18 +135,22 @@ Dados retirados do site The Cat API (https://thecatapi.com/)
 ```
 API_lets_delivery
 ├─ .gitignore
-├─ crud.py
-├─ database.py
-├─ data_filters.py
-├─ db
-│  ├─ bd_itens.txt
-│  └─ cat_api.db
+├─ app
+│  ├─ crud.py
+│  ├─ database.py
+│  ├─ data_filters.py
+│  ├─ db
+│  │  ├─ bd_itens.txt
+│  │  └─ cat_api.db
+│  ├─ models.py
+│  ├─ requirements.txt
+│  ├─ schemas.py
+│  ├─ test
+│  │  ├─ test_api.py
+│  │  └─ __init__.py
+│  └─ __init__.py
 ├─ docker-compose.yml
 ├─ Dockerfile
 ├─ main.py
-├─ models.py
-├─ README.md
-├─ requirements.txt
-├─ schemas.py
-└─ test_api.py
+└─ README.md
 ```
