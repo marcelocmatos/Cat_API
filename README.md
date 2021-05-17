@@ -10,7 +10,7 @@
 ## 📝 Conteúdo
 
 - [Sobre](#sobre)
-- [Iniciando](#iniciando)
+- [Descrição do Projeto](#descricao)
 - [Uso](#uso)
 - [Desenvolvido Usando](#desenvolvido_usando)
 - [Autores](#autores)
@@ -20,14 +20,43 @@
 
 Projeto desenvolvido com o Fast API para o processo seletivo da Let's Delivery em Maio/2021
 
-## 🏁 Iniciando <a name = "iniciando"></a>
+## 🏁 Descrição do Projeto <a name = "descricao"></a>
 
 Descrição do Projeto. 
 
-### Como usar (testar) a API <a name = "uso"></a>
+### Pacotes principais usados no projeto
+
+- Fast API
+- Sqlalchemy
+- SQLite 3
+- Uvicorn
+- Pytest
+
+### Docker File
+
+Usado o Docker para fazer os containers do projeto. Está subindo, mas não acessando a página. Sob investigação.
+
+## 🔧 Testes Automatizados do Projeto <a name = "tests"></a>
+
+Para fazer os testes automatizados do projeto foi o usado o framwork Pytest.
+Para executar os testes, no terminal, vá até a pasta do projeto e escreva o comando:
+pytest
+
+### Divisão dos testes
+
+Alguns casos de borda a serem testados:
+- Filtro de tamanho com valor negativo
+- PATCH mudando a raça para um outro valor já existente
+
+### Codificação dos testes
+
+Testes codificados no padão do Pytest
+
+## Como usar (testar) a API <a name = "uso"></a>
 Para acessar as páginas de GET, POST, PUT, DELETE acesse o http://127.0.0.1:8000/docs
 
-Demais páginas a serem disponibilizadas no projeto:
+### Páginas disponíveis no projeto
+Páginas a serem disponibilizadas no projeto:
 ```
 http://127.0.0.1:8000/breed/create
 http://127.0.0.1:8000/breed/all
@@ -90,33 +119,6 @@ Dados retirados do site The Cat API (https://thecatapi.com/)
 - Three Colors
 ```
 
-### Pacotes principais usados no projeto
-
-- Fast API
-- Sqlalchemy
-- SQLite 3
-- Uvicorn
-- Pytest
-
-### Docker File
-
-Usado o Docker para fazer os containers do projeto. Está subindo, mas não acessando a página. Sob investigação.
-
-## 🔧 Testes Automatizados do Projeto <a name = "tests"></a>
-
-Para fazer os testes automatizados do projeto foi o usado o framwork Pytest.
-Para executar os testes, no terminal, vá até a pasta do projeto e escreva o comando:
-pytest
-
-### Divisão dos testes
-
-Alguns casos de borda a serem testados:
-- Filtro de tamanho com valor negativo
-- PATCH mudando a raça para um outro valor já existente
-
-### Codificação dos testes
-
-Testes codificados no padão do Pytest
 
 ## ⛏️ Desenvolvido Usando <a name = "desenvolvido_usando"></a>
 
