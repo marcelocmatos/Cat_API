@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String
-from database import Base
+from .database import Base
 
 class CatApi(Base):
     __tablename__ = 'cat_api'

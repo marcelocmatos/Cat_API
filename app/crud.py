@@ -1,7 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import update as sql_update
-import models
-import schemas
+from . import models, schemas
 
 
 def get_cat_by_id(db: Session, cat_id : int):

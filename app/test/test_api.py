@@ -1,18 +1,12 @@
 from starlette.testclient import TestClient
-from database import SessionLocal
+from app.database import SessionLocal
 from main import app
+
+
 
 client = TestClient(app)
 
-
 db = SessionLocal()
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close_all()
 
 def test_main_status_code():
     response = client.get("/")
