@@ -3,11 +3,8 @@ from typing import List
 from sqlalchemy.orm import Session
 import crud, models, schemas
 from database import SessionLocal, engine
-from data_filters import DataFilters
 
 models.Base.metadata.create_all(bind=engine)
-
-location_filter = DataFilters.country_filter()
 
 app = FastAPI()
 
@@ -24,7 +21,7 @@ async def index():
     return {'pagina': 'inicial'}
 
 @app.get('/breed/all', response_model=List[schemas.Breed])
-def read_breeds(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+async def read_breeds(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     breeds = crud.get_cats(db, skip=skip, limit=limit)
     return breeds
 
@@ -53,21 +50,21 @@ async def read_pattern(pattern: str, db: Session = Depends(get_db)):
     cat_pattern = crud.get_cat_by_pattern(db, pattern)
     return cat_pattern
 
-@app.post("/breed/", response_model=schemas.Breed)
-def create_breed(breed: schemas.CreateBreed, db: Session = Depends(get_db)):
+@app.post("/breed/create", response_model=schemas.Breed)
+async def create_breed(breed: schemas.CreateBreed, db: Session = Depends(get_db)):
     db_cat_create = crud.create_breed(db, breed)
     if db_cat_create:
         raise HTTPException(status_code=500, detail="Breed already registered")
     return db_cat_create
 
-@app.delete("/breed/", response_model=schemas.DeleteBreed)
-def delete_breed(breed: schemas.DeleteBreed, db: Session = Depends(get_db)):
+@app.delete("/breed/delete", response_model=schemas.DeleteBreed)
+async def delete_breed(breed: schemas.DeleteBreed, db: Session = Depends(get_db)):
     db_cat_delete = crud.delete_breed(db, breed.breed)
     if db_cat_delete:
         raise HTTPException(status_code=400, detail="Breed doesn't exist")
     return db_cat_delete
 
-@app.put("/breed/", response_model=schemas.UpdateBreed)
-def update_breed(breed: schemas.UpdateBreed, db: Session = Depends(get_db)):
+@app.put("/breed/update", response_model=schemas.UpdateBreed)
+async def update_breed(breed: schemas.UpdateBreed, db: Session = Depends(get_db)):
     db_cat_update = crud.update_breed(db, breed)
     return db_cat_update
