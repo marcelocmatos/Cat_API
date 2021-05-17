@@ -7,7 +7,7 @@
     <br> 
 </p>
 
-## 📝 Table of Contents
+## 📝 Conteúdo
 
 - [Sobre](#sobre)
 - [Iniciando](#iniciando)
@@ -18,11 +18,11 @@
 
 ## 🧐 Sobre <a name = "sobre"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Projeto desenvolvido com o Fast API para o processo seletivo da Let's Delivery em Maio/2021
 
 ## 🏁 Iniciando <a name = "iniciando"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+Descrição do Projeto. 
 
 ### Pacotes principais usados no projeto
 
@@ -49,7 +49,7 @@ Alguns casos de borda a serem testados:
 
 Testes codificados no padão do Pytest
 
-## ⛏️ Construindo Usando <a name = "desenvolvido_usando"></a>
+## ⛏️ Desenvolvido Usando <a name = "desenvolvido_usando"></a>
 
 - [SQLite 3](https://sqlite.org/index.html) - Banco de Dados
 - [Uvicorn](https://www.uvicorn.org/) - Framework do Servidor
@@ -66,12 +66,16 @@ API_lets_delivery
 ├─ .gitignore
 ├─ crud.py
 ├─ database.py
+├─ data_filters.py
 ├─ db
 │  ├─ bd_itens.txt
 │  └─ cat_api.db
+├─ docker-compose.yml
+├─ Dockerfile
 ├─ main.py
 ├─ models.py
 ├─ README.md
 ├─ requirements.txt
 └─ schemas.py
+
 ```
