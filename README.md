@@ -131,10 +131,10 @@ Dados retirados do site The Cat API (https://thecatapi.com/)
 - [Marcelo Cabral de Matos](https://github.com/marcelocmatos) - Único Autor
 
 ## 🎉 Árvore do Projeto <a name = "arvore_projeto"></a>
-
 ```
 API_lets_delivery
 ├─ .gitignore
+├─ API_lets_delivery
 ├─ app
 │  ├─ crud.py
 │  ├─ database.py
@@ -143,7 +143,6 @@ API_lets_delivery
 │  │  ├─ bd_itens.txt
 │  │  └─ cat_api.db
 │  ├─ models.py
-│  ├─ requirements.txt
 │  ├─ schemas.py
 │  ├─ test
 │  │  ├─ test_api.py
@@ -152,5 +151,6 @@ API_lets_delivery
 ├─ docker-compose.yml
 ├─ Dockerfile
 ├─ main.py
-└─ README.md
+├─ README.md
+└─ requirements.txt
 ```
