@@ -3,8 +3,11 @@ from typing import List
 from sqlalchemy.orm import Session
 import crud, models, schemas
 from database import SessionLocal, engine
+from data_filters import DataFilters
 
 models.Base.metadata.create_all(bind=engine)
+
+location_filter = DataFilters.country_filter()
 
 app = FastAPI()
 
@@ -14,6 +17,7 @@ def get_db():
         yield db
     finally:
         db.close_all()
+
 
 @app.get('/')
 async def index():    
