@@ -24,8 +24,29 @@ Projeto desenvolvido com o Fast API para o processo seletivo da Let's Delivery e
 
 Descrição do Projeto. 
 
+### Como usar (testar) a API <a name = "uso"></a>
+Para acessar as páginas de GET, POST, PUT, DELETE acesse o http://127.0.0.1:8000/docs
 
-### Dados no Banco de dados para testes:
+Demais páginas a serem disponibilizadas no projeto:
+```
+http://127.0.0.1:8000/breed/create
+http://127.0.0.1:8000/breed/all
+http://127.0.0.1:8000/breed/update
+http://127.0.0.1:8000/breed/delete
+http://127.0.0.1:8000/breed/all
+http://127.0.0.1:8000/breed/{breed}
+http://127.0.0.1:8000/location/{location}
+http://127.0.0.1:8000/coat/{coat}
+http://127.0.0.1:8000/body/{body}
+http://127.0.0.1:8000/pattern/{pattern}
+http://127.0.0.1:8000/breed/delete
+http://127.0.0.1:8000/breed/create
+http://127.0.0.1:8000/breed/all
+http://127.0.0.1:8000/breed/update
+http://127.0.0.1:8000/breed/delete
+```
+
+#### Dados no Banco de dados para testes:
 Dados retirados do site The Cat API (https://thecatapi.com/)
 - Breed:
 ```
@@ -67,28 +88,6 @@ Dados retirados do site The Cat API (https://thecatapi.com/)
 - Solid
 - Two Colors
 - Three Colors
-```
-
-### Páginas disponíveis da API
-Para acessar as páginas de GET, POST, PUT, DELETE acesse o http://127.0.0.1:8000/docs
-
-Demais páginas a serem disponibilizadas no projeto:
-```
-http://127.0.0.1:8000/breed/create
-http://127.0.0.1:8000/breed/all
-http://127.0.0.1:8000/breed/update
-http://127.0.0.1:8000/breed/delete
-http://127.0.0.1:8000/breed/all
-http://127.0.0.1:8000/breed/{breed}
-http://127.0.0.1:8000/location/{location}
-http://127.0.0.1:8000/coat/{coat}
-http://127.0.0.1:8000/body/{body}
-http://127.0.0.1:8000/pattern/{pattern}
-http://127.0.0.1:8000/breed/delete
-http://127.0.0.1:8000/breed/create
-http://127.0.0.1:8000/breed/all
-http://127.0.0.1:8000/breed/update
-http://127.0.0.1:8000/breed/delete
 ```
 
 ### Pacotes principais usados no projeto
