@@ -1,4 +1,4 @@
-<h3 align="center">CAT API</h3>
+<h1 align="center">CAT API</h1>
 
 
 ---
