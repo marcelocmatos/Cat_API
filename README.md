@@ -28,7 +28,7 @@ Descrição do Projeto.
 ### Dados no Banco de dados para testes:
 Dados retirados do site The Cat API (https://thecatapi.com/)
 - Breed:
-'''
+```
 - Abyssinian
 - Aegean
 - American Curl
@@ -39,9 +39,9 @@ Dados retirados do site The Cat API (https://thecatapi.com/)
 - Khao Manee
 - British Shorthair
 - Manx
-'''
+```
 - Location of origin
-'''
+```
 - Egypt
 - Greece
 - United States
@@ -49,31 +49,31 @@ Dados retirados do site The Cat API (https://thecatapi.com/)
 - Thailand
 - United Kingdom
 - Isle of Man
-'''
+```
 - Coat length
-'''
+```
 - Long-haired
 - Short-haired
 - Medium-haired
-'''
+```
 - Body type
-'''
+```
 - Fit
 - Normal
 - Big
-'''
+```
 - Pattern
-'''
+```
 - Solid
 - Two Colors
 - Three Colors
-'''
+```
 
 ### Páginas disponíveis da API
 Para acessar as páginas de GET, POST, PUT, DELETE acesse o http://127.0.0.1:8000/docs
 
 Demais páginas a serem disponibilizadas no projeto:
-'''
+```
 http://127.0.0.1:8000/breed/create
 http://127.0.0.1:8000/breed/all
 http://127.0.0.1:8000/breed/update
@@ -89,8 +89,7 @@ http://127.0.0.1:8000/breed/create
 http://127.0.0.1:8000/breed/all
 http://127.0.0.1:8000/breed/update
 http://127.0.0.1:8000/breed/delete
-
-'''
+```
 
 ### Pacotes principais usados no projeto
 
